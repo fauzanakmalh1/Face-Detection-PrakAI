@@ -1,0 +1,3 @@
+Image001.jpg,happy
+Image002.jpg,angry
+Image003.jpg,neutral

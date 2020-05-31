@@ -34,7 +34,7 @@ img = zeros(imageSize(1)*imageSize(2),numImage);
 for i = 1:numImage
     aa = imresize(faceDetection(imresize(imread(Images{i,1}),[375,300])),imageSize);
     img(:,i) = aa(:);
-    % disp(sprintf('Loading Image # %d',i));
+    disp(sprintf('Loading Image # %d',i));
 end
 % Generating the mean image
 meanImage = mean(img,2);        

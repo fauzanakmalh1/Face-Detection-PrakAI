@@ -34,7 +34,6 @@ W=size(I,2);
 
 % Light Compensation
 C=255*imadjust(I/255,[0.3;1],[0;1]);
-
 % figure,imshow(C/255);
 % title('Lighting compensation');
 
@@ -50,7 +49,6 @@ end
 
 m_S = size(S);
 S(m_S(1)-7:m_S(1),:) = 0;
-
 % figure;imshow(S);
 
 % Reducing the noise
@@ -61,18 +59,15 @@ for i=1:H-5
         SN(i:i+5, j:j+5)=(localSum>20);
     end
 end
-
 % figure;imshow(SN);
     
  Iedge=edge(uint8(SN));
- 
 % figure;imshow(Iedge);
  
 SE = strel('square',9);
 SN_edge = (imdilate(Iedge,SE));
 
 % SN_edge =  SN_edge1.*SN;
- 
 %  figure;imshow(SN_edge);
  
 SN_fill = imfill(SN_edge,'holes');
