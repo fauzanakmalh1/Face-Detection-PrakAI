@@ -1,5 +1,5 @@
 function [numImage,img] = loadImage( strImagePath )
-%LOADIMAGE read in the images from given file Path
+%   LOADIMAGE read in the images from given file Path
 %   numImage is the number of loaded Images
 %   img is the matrix as the input for PCA process
 %   to prepare for PCA, the loaded images are all substracted by mean image

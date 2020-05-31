@@ -1,14 +1,13 @@
-% Face expression recognition using the Eigenface method
+% This is a sample script
+% It demos the face expression recognition using the Eigenface method
 
-disp('========================')
-disp('Face Emotion Recognition')
-disp('========================')
-disp('By:')
+disp('Face Emotion Recognition, by:')
 disp('Fauzan Akmah Hariz - 140181080005')
 disp('Asep Budiyana Muharam - 140810180029')
 disp('Natasya Rizki Maharani - 140810180004')
 disp('Shania Salsabila - 140810180014')
 disp('Nurul Maarif - 140810180040')
+%disp('After your face appeared in the camera window, please left click your mouse to take a picture of youself')
 %disp('Save your picture to TestData')
 
 %pictureCapture
@@ -25,12 +24,12 @@ LabelPath = 'Labelling.txt';
 % Display the result
 RecognizedExpression = strcat(int2str(minDistIndex),'.jpg');
     
-    % Read in the image label
+    % read in the image label
     fid=fopen(LabelPath);
     imageLabel=textscan(fid,'%s %s','whitespace',',');
     fclose(fid);
     
-    % Export the matched label
+    % export the matched label
     Best_Match = cell2mat(imageLabel{1,1}(minDistIndex));
     ExprLabel = cell2mat(imageLabel{1,2}(minDistIndex));
 

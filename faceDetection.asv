@@ -17,7 +17,7 @@ function [aa,SN_fill,FaceDat] = faceDetection(I)
 % Check the paper for more details.
 
 % usage:
-%  I=double(imread('C:\Data\photos.jpg'));
+%  I=double(imread('C:\Data\g.jpg'));
 %  faceDetection(I);
 % The function will display the bounding box if a face is found.
 
