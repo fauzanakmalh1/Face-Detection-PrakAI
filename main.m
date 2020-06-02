@@ -26,7 +26,7 @@ RecognizedExpression = strcat(int2str(minDistIndex),'.jpg');
     imageLabel=textscan(fid,'%s %s','whitespace',',');
     fclose(fid);
     
-    % Mengluarkan foto yang cocok
+    % Mengeluarkan foto yang cocok
     Best_Match = cell2mat(imageLabel{1,1}(minDistIndex));
     ExprLabel = cell2mat(imageLabel{1,2}(minDistIndex));
 
