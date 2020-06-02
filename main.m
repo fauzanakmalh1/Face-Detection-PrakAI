@@ -1,5 +1,3 @@
-% Face expression recognition using the Eigenface method
-
 disp('========================')
 disp('Face Emotion Recognition')
 disp('========================')
@@ -11,8 +9,6 @@ disp('Shania Salsabila - 140810180014')
 disp('Nurul Maarif - 140810180040')
 %disp('Save your picture to TestData')
 
-%pictureCapture
-
 TrainImagePath = 'TrainData';
 TestImagePath = 'TestData';
 LabelPath = 'Labelling.txt';
@@ -22,15 +18,15 @@ LabelPath = 'Labelling.txt';
 
 [C,minDist,minDistIndex] = eigenFaceRecognition(TrainImg,TestImg,NumTrainImg,NumTestImg );
 
-% Display the result
+% Menampilkan hasil
 RecognizedExpression = strcat(int2str(minDistIndex),'.jpg');
     
-    % Read in the image label
+    % Membaca labelling.txt
     fid=fopen(LabelPath);
     imageLabel=textscan(fid,'%s %s','whitespace',',');
     fclose(fid);
     
-    % Export the matched label
+    % Mengluarkan foto yang cocok
     Best_Match = cell2mat(imageLabel{1,1}(minDistIndex));
     ExprLabel = cell2mat(imageLabel{1,2}(minDistIndex));
 
