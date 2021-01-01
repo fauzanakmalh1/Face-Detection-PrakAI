@@ -58,16 +58,16 @@ for i=1:H-5
     end
 end
 % figure;imshow(SN);
-    
- Iedge=edge(uint8(SN));
+
+Iedge=edge(uint8(SN));
 % figure;imshow(Iedge);
- 
+
 SE = strel('square',9);
 SN_edge = (imdilate(Iedge,SE));
 
 % SN_edge =  SN_edge1.*SN;
 %  figure;imshow(SN_edge);
- 
+
 SN_fill = imfill(SN_edge,'holes');
 %  figure;imshow(SN_fill);
 

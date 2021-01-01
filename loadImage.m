@@ -11,16 +11,16 @@ end
 
 i=0;
 for j = 3:lenImages
-     if ((~structImages(j).isdir))
-         if  (structImages(j).name(end-3:end)=='.jpg')
-             i=i+1;
-             Images{i,1} = [strImagePath,'\',structImages(j).name];
-         end
-     end
+    if ((~structImages(j).isdir))
+        if  (structImages(j).name(end-3:end)=='.jpg')
+            i=i+1;
+            Images{i,1} = [strImagePath,'\',structImages(j).name];
+        end
+    end
 end
 numImage = i;
 
-imageSize = [280,180]; 
+imageSize = [280,180];
 
 img = zeros(imageSize(1)*imageSize(2),numImage);
 for i = 1:numImage
@@ -28,8 +28,8 @@ for i = 1:numImage
     img(:,i) = aa(:);
     disp(sprintf('Loading Image # %d',i));
 end
-meanImage = mean(img,2);        
+meanImage = mean(img,2);
 
-img = (img - meanImage*ones(1,numImage))';     
+img = (img - meanImage*ones(1,numImage))';
 end
 

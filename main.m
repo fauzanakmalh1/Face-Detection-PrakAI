@@ -20,12 +20,12 @@ LabelPath = 'Labelling.txt';
 
 % Menampilkan hasil
 RecognizedExpression = strcat(int2str(minDistIndex),'.jpg');
-    
+
     % Membaca labelling.txt
     fid=fopen(LabelPath);
     imageLabel=textscan(fid,'%s %s','whitespace',',');
     fclose(fid);
-    
+
     % Mengeluarkan foto yang cocok
     Best_Match = cell2mat(imageLabel{1,1}(minDistIndex));
     ExprLabel = cell2mat(imageLabel{1,2}(minDistIndex));
